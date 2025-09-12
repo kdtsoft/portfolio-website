@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaYoutube, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll"; // ✅ react-scroll
 import logo from "../assets/images/logo.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Technologies", href: "#technologies" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", to: "home" },
+    { name: "Technologies", to: "technologies" },
+    { name: "Projects", to: "projects" },
+    { name: "Experience", to: "experience" },
+    { name: "Contact", to: "contact" },
   ];
 
   const socialLinks = [
@@ -30,16 +31,23 @@ function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <a href="#home">
-            <img src={logo} alt="Logo" className="w-28" />
-          </a>
+          <Link to="home" smooth={true} duration={500}>
+            <img src={logo} alt="Logo" className="w-28 cursor-pointer" />
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 text-lg font-medium text-white">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="hover:text-blue-400 transition">
+              <Link
+                key={link.name}
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-70} // navbar height adjust
+                className="hover:text-blue-400 transition cursor-pointer"
+              >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -73,14 +81,17 @@ function Navbar() {
         <div className="md:hidden bg-slate-900 shadow-md px-4 py-4 z-50 relative">
           <div className="flex flex-col gap-4 text-lg font-medium text-white">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="hover:text-blue-400 transition"
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="hover:text-blue-400 transition cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <div className="flex gap-4 text-xl pt-4">
               {socialLinks.map((social, index) => (

@@ -28,7 +28,7 @@ const childVariants = {
 
 function Hero() {
   return (
-    <div className="pb-4 mt-20 lg:mb-36 " id="about">
+    <div className="pb-4 mt-20 lg:mb-36 " id="home">
       <div className="flex flex-wrap lg:flex-row-reverse">
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:p-8">
@@ -45,7 +45,7 @@ function Hero() {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2" >
           <motion.div
             initial="hidden"
             animate="visible"

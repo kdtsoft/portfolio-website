@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function Projects() {
   return (
-    <section className="relative h-full w-full bg-slate-950 py-20">
+    <section className="relative h-full w-full bg-slate-950 py-20" id="projects">
       {/* Grid BG */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] pointer-events-none"></div>
 
@@ -13,7 +13,6 @@ function Projects() {
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.6 }}
         className="relative z-10 mb-16 text-center text-4xl font-bold tracking-wide text-white"
-        id="projects"
       >
         My Projects
       </motion.h2>
@@ -38,9 +37,7 @@ function Projects() {
             <h3 className="mt-4 text-xl font-semibold text-white">
               {project.title}
             </h3>
-            <p className="mt-2 text-sm text-gray-300">
-              {project.description}
-            </p>
+            <p className="mt-2 text-sm text-gray-300">{project.description}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.technologies.map((tech, i) => (
                 <span

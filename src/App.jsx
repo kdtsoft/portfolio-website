@@ -4,6 +4,7 @@ import Technologies from "./components/Technologies";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Projects />
         <Experience />
         <Contact />
+        <Footer/>
       </div>
     </div>
   );
