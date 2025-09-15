@@ -78,7 +78,7 @@ function Hero() {
 
             <motion.a
               variants={childVariants}
-              href="/resume.pdf"
+              href="/public/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
