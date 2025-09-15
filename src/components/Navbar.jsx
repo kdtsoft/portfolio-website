@@ -24,9 +24,7 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-slate-950 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]" />
-      </div>
+      <div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div><div class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
         <div className="flex items-center justify-between py-4">
